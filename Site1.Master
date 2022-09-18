@@ -1,0 +1,374 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="seniorProject.Site1"   %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>DALILAK</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+    <link href="assets/img/book.png" rel="icon">
+    
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <link href="fontawesome/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%--Datatables js--%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+  <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+       <!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" rel="stylesheet" />
+   
+   
+
+     <script src="Scripts/angular.js"></script>
+          <script type="text/javascript">
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+              }
+
+
+
+</script>
+    <style type="text/css">
+        /* The search field */
+        #myInput {
+            box-sizing: border-box;
+            background-image: url('search.png');
+            background-position: 14px 12px;
+            background-repeat: no-repeat;
+            font-size: 16px;
+            padding: 14px 20px 12px 45px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+            /* The search field when it gets focus/clicked on */
+            #myInput:focus {
+                outline: 3px solid #ddd;
+            }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown1 {
+            position: absolute;
+            top: 30px;
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: 180px;
+
+
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f6f6f6;
+            min-width: 230px;
+            border: 1px solid #ddd;
+            z-index: 1;
+        }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                /* Change color of dropdown links on hover */
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1
+                }
+
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {
+            display: block;
+        }
+
+
+        /*languages*/
+
+        .ENAR {
+            padding: 7px 25px 8px 25px;
+            position: absolute;
+            top: 30px;
+            margin-left: 200px;
+        }
+
+        /*.inline-element {
+            position: static;
+            display: inline-block;
+        }*/
+
+        .navbu ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            align-items: center;
+            position: absolute;
+            top: 25px;
+            right: 400px;
+        }
+
+        .navbu a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0 10px 30px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        .get-hello-btn {
+            border-radius: 4px;
+            padding: 7px 25px 8px 25px;
+            white-space: nowrap;
+            transition: 0.3s;
+            font-size: 15px;
+            display: inline-block;
+            position: absolute;
+            top: 30px;
+            right: 160px;
+        }
+
+      
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+
+<body>
+
+    <form id="form1" runat="server">
+            <!-- ======= Header ======= -->
+  <div id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+        <h1 class="logo me-auto me-lg-0"><a href="Home.aspx">DALILAK<span>.</span></a></h1>
+        <div class="navbu">
+
+
+            <ul>
+
+                <asp:LinkButton ID="linkHome" runat="server" class="nav navbar-nav" meta:resourceKey="lbtnHome" href="home.aspx">Home</asp:LinkButton>
+                <asp:LinkButton ID="linkAbout" runat="server" class="nav navbar-nav" meta:resourceKey="lbtnAbout" href="#about">About</asp:LinkButton>
+                <asp:LinkButton ID="linkServices" runat="server" class="nav navbar-nav" meta:resourceKey="lbtnServices" href="#services">Services</asp:LinkButton>
+                <asp:LinkButton ID="linkPortfolio" runat="server" class="nav navbar-nav" meta:resourceKey="lbtnPortfolio" href="#portfolio">Portfolio</asp:LinkButton>
+                <asp:LinkButton ID="linkTeam" runat="server" class="nav navbar-nav" meta:resourceKey="lbtnTeam" href="#team">Team</asp:LinkButton>
+
+                <asp:LinkButton ID="linkContact" runat="server" class="nav navbar-nav" meta:resourceKey="lbtnContact" href="#contact">Contact</asp:LinkButton>
+            </ul>
+        </div>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+
+
+            <%--        <ul>
+          
+            <asp:LinkButton ID="linkHome" runat="server"  class="nav-link scrollto active" meta:resourceKey="lbtnHome" href="home.aspx">Home</asp:LinkButton>
+            <asp:LinkButton ID="linkAbout" runat="server" class="nav-link scrollto "  meta:resourceKey="lbtnAbout" href="#about">About</asp:LinkButton>
+            <asp:LinkButton ID="linkServices" runat="server"  class="nav-link scrollto "  meta:resourceKey="lbtnServices" href="#services">Services</asp:LinkButton>
+            <asp:LinkButton ID="linkPortfolio" runat="server"  class="nav-link scrollto " meta:resourceKey="lbtnPortfolio" href="#portfolio">Portfolio</asp:LinkButton>
+            <asp:LinkButton ID="linkTeam" runat="server"  class="nav-link scrollto " meta:resourceKey="lbtnTeam" href="#team">Team</asp:LinkButton>
+
+             <asp:LinkButton ID="linkContact" runat="server" class="nav-link scrollto "  meta:resourceKey="lbtnContact" href="#contact">Contact</asp:LinkButton>
+       </ul>
+            --%>
+
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+
+        <div class="ENAR">
+
+            <asp:LinkButton Style="display: inline-block;" ID="lbtnEnglish" runat="server" OnClick="lbtn_Click" ForeColor="#FFCC66" meta:resourcekey="lbtnEnglishResource1"> English </asp:LinkButton>
+
+            <asp:LinkButton Style="display: inline-block;" ID="lbtnArabic" runat="server" OnClick="lbtn_Click" ForeColor="#FFCC66" meta:resourcekey="lbtnArabicResource1"> Arabic </asp:LinkButton>
+        </div>
+
+
+        <li class="dropdown1">
+                <asp:Label ID="Label2" onClick="myFunction()" class="nav-link scrollto active" runat="server" meta:resourcekey="Label2Resource1" > <div class="icon"> <i class="bx bx-search-alt-2"></i></div></asp:Label>
+                <div id="myDropdown" class="dropdown-content">
+                    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                    <a href="studenServices.aspx"><asp:Localize ID="LocRAbout" meta:resourceKey="LocRAbout" Text="Studen Service" runat="server"></asp:Localize></a>
+                    <a href="colleges.aspx"><asp:Localize ID="LocRServices" meta:resourceKey="LocRServices" Text="Colleges" runat="server"></asp:Localize></a>
+                    <a href="chatUsers.aspx"><asp:Localize ID="LocRProt" meta:resourceKey="LocRProt" Text="Chatting" runat="server"></asp:Localize></a>
+                    <a href="collegeCSE.aspx"><asp:Localize ID="LocRTeam" meta:resourceKey="LocRTeam" Text="College Of CSE" runat="server"></asp:Localize></a>
+                    <a href="#contact"><asp:Localize ID="LocRContact" meta:resourceKey="LocRContact" Text="Contact" runat="server"></asp:Localize></a>
+                    <a href="seniorProject.aspx"><asp:Localize ID="LocRSP" meta:resourceKey="LocRSP" Text="Senior Projects" runat="server"></asp:Localize></a>
+                    <a href="trainingProgram.aspx"><asp:Localize ID="LocRTP" meta:resourceKey="LocRTP" Text="Training Program" runat="server"></asp:Localize></a>
+                    <a href="insideTraining.aspx"><asp:Localize ID="LocRIT" meta:resourceKey="LocRIT" Text="Inside Training" runat="server"></asp:Localize></a>
+                    <a href="outsideTraining.aspx"><asp:Localize ID="LocROT" meta:resourceKey="LocROT" Text="Outside Training" runat="server"></asp:Localize></a>
+                    <a href="onlineTraining.aspx"><asp:Localize ID="LocRONT" meta:resourceKey="LocRONT" Text="Online Training" runat="server"></asp:Localize></a>
+                    <a href="clubs.aspx"><asp:Localize ID="LocRCL" meta:resourceKey="LocRCL" Text="clubs" runat="server"></asp:Localize></a>
+                     <a href="SearchClubs.aspx"><asp:Localize ID="LocRCLS" meta:resourceKey="LocRCLS" Text="More dtails about Clubs" runat="server"></asp:Localize></a>
+                </div>
+            </li>
+
+        <asp:LinkButton class="get-started-btn scrollto" ID="linkAdminLogin" runat="server"  meta:resourceKey="lbtnAdminLogin" OnClick="linkAdminLogin_Click" PostBackUrl="~/adminLogin.aspx">Admin</asp:LinkButton>
+        <asp:LinkButton class="get-started-btn scrollto" ID="linkAdminLogout" runat="server" Visible="False"  meta:resourceKey="lbtnAdminLogout" OnClick="linkAdminLogout_Click">Log Out</asp:LinkButton>
+         
+        <asp:LinkButton class="get-hello-btn" ID="lbtnMsg" runat="server" Visible="False"  meta:resourceKey="lbtnAMsg" OnClick="lbtnMsg_Click">Hello user</asp:LinkButton>
+          
+    </div>
+  </div>
+            <!-- End Header -->
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
+
+            </asp:ContentPlaceHolder>
+        
+
+
+        
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3><asp:Localize ID="LocDalilak" meta:resourceKey="Dalilak" Text="DALILAK" runat="server"></asp:Localize><span>.</span></h3>
+              <p>
+             
+                
+                <strong>Email:</strong> info@uhb.edu.sa<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://twitter.com/UoHB_Official"  target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook" ><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/uhb.official/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+            
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4> <asp:Localize ID="LocUsefulLink" meta:resourceKey="UsefulLink" Text="Useful Link" runat="server"></asp:Localize></h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="home.aspx">
+                  <asp:Localize ID="LoclbtnHome1" meta:resourceKey="lbtnHome1" Text="Home" runat="server"></asp:Localize></a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">
+                   <asp:Localize ID="LoclbtnAbout1" meta:resourceKey="lbtnAbout1" Text="About" runat="server"></asp:Localize></a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services" >
+                  <asp:Localize ID="LoclbtnServices1" meta:resourceKey="lbtnServices1" Text="Services" runat="server"></asp:Localize> </a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="TermsOfService.aspx" target="_blank">
+                  <asp:Localize ID="LoclbtnTermsOfService1" meta:resourceKey="lbtnTermsOfService1" Text="Terms of service" runat="server"></asp:Localize></a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="PrivacyPolicy.aspx" target="_blank">
+                  <asp:Localize ID="LoclbtnPrivacyPolicy1" meta:resourceKey="lbtnPrivacyPolicy1" Text="Privacy policy" runat="server"></asp:Localize></a></li>
+            </ul>
+          </div>
+
+        
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>DALILAK</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+       Designed by <a href="https://www.uhb.edu.sa/">Students of CSE</a>
+      </div>
+    </div>
+  </footer>
+        
+        <!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+    </form>
+</body>
+</html>
